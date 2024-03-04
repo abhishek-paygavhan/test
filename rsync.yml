@@ -1,4 +1,4 @@
 - hosts: all
   tasks:
-   - name: Rsync all disk image files from /kvm* directories
+   - name: Rsync all bundle tar into /root/backup
        ansible.builtin.shell: rsync -avh /root/tar* /root/backup
