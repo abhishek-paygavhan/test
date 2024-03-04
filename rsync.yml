@@ -2,4 +2,6 @@
   tasks:
     - name: Rsync all bundle tar into /root/backup
       ansible.builtin.shell: rsync -avh /root/tar/* /root/backup
+      async: 300
+      poll: 0
        
