@@ -1,4 +1,5 @@
 - hosts: all
   tasks:
-   - name: Rsync all bundle tar into /root/backup
-       ansible.builtin.shell: rsync -avh /root/tar/* /root/backup
+    - name: Rsync all bundle tar into /root/backup
+      ansible.builtin.shell: rsync -avh /root/tar/* /root/backup
+       
