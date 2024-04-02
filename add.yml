@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+    - name: Add the user 'james'
+      community.general.homectl:
+        name: john
+        state: present
