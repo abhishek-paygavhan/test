@@ -10,4 +10,10 @@
           content: |
               [fqdn]
               fqdn=
+    - name: set fqdn file.
+      ansible.builtin.lineinfile:
+          path: /etc/ansible/facts.d/fqdn.fact
+          regexp: '^fqdn'
+          line: "fqdn={{ raw_dns }}"
+
 
