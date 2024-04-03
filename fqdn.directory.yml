@@ -4,3 +4,10 @@
       file:
          path: /etc/ansible/facts.d
          state: directory
+    - name: Create facts dir
+      copy:
+          dest: "/etc/ansible/facts.d/fqdn.fact"
+          content: |
+              [fqdn]
+              fqdn=
+
