@@ -1,4 +1,5 @@
 - hosts: all
+  gather_facts: false
   tasks:
       - name: Setting host facts using key=value pairs, this format can only create strings or booleans
         ansible.builtin.set_fact:
