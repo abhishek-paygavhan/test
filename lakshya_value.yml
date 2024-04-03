@@ -1,0 +1,4 @@
+- hosts: all
+  tasks:
+    - name: print lakshya variable value
+      debug: lakshya
