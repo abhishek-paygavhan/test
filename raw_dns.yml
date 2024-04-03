@@ -1,6 +1,6 @@
 - name: Set the FQDN facts
   hosts: all
-  gather_facts: true
+  gather_facts: false
   tasks:
 
     - name: Set the fqdn to undefined
