@@ -21,7 +21,8 @@
             fqdn: "{{ raw_dns }}"
             cachable: true
           when: '"," not in raw_dns'
-        - setup:
+     
+     - setup:
 
      - name: print fqdn
        debug: var=fqdn
