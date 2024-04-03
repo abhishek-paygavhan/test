@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+    - name: Create facts fqdn file
+      file:
+         path: /etc/ansible/facts.d
+         state: directory
