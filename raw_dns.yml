@@ -22,8 +22,8 @@
             cachable: true
           when: '"," not in raw_dns'
      
-     - setup:
+    - setup:
 
-     - name: print fqdn
-       debug: var=fqdn
+    - name: print fqdn
+      debug: var=fqdn
 
