@@ -21,6 +21,24 @@
             fqdn: "{{ raw_dns }}"
             cachable: true
           when: '"," not in raw_dns'
+          
+    - name: Create facts fqdn file
+      file:
+        path: /etc/ansible/facts.d
+        state: directory
+
+    - name: Create facts dir
+      copy:
+        dest: "/etc/ansible/facts.d/fqdn.fact"
+        content: |
+          [fqdn]
+          fqdn=
+
+    - name: set fqdn file.
+      ansible.builtin.lineinfile:
+        path: /etc/ansible/facts.d/fqdn.fact
+        regexp: '^fqdn'
+        line: "fqdn={{ raw_dns }}"      
      
     - setup:
 
