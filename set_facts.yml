@@ -3,6 +3,7 @@
       - name: Setting host facts using key=value pairs, this format can only create strings or booleans
         ansible.builtin.set_fact:
             lakshya: smart_boy
+            cacheable: true
 
       - name: print variable value
         debug: var=lakshya
