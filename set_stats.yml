@@ -6,4 +6,3 @@
         data:
           my_custom_stat: "some_value"
 
-    - name: Perform some tasks
