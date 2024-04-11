@@ -1,0 +1,9 @@
+- name: Set stats example
+  hosts: all
+  tasks:
+    - name: Set custom stats for each host
+      ansible.builtin.set_stats:
+        data:
+          my_custom_stat: "some_value"
+
+    - name: Perform some tasks
