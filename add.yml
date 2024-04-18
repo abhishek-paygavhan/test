@@ -1,6 +1,9 @@
 - hosts: all
+  environment:
+    ANSIBLE_STDOUT_CALLBACK: json
+    ANSIBLE_CALLBACK_WHITELIST: json
   tasks:
-    - name: Add the user 'james'
+    - name: Add the user 'om'
       community.general.homectl:
-        name: john
+        name: om
         state: present
