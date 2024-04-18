@@ -1,7 +1,4 @@
 - hosts: all
-  environment:
-    ANSIBLE_STDOUT_CALLBACK: json
-    ANSIBLE_CALLBACK_WHITELIST: json
   tasks:
     - name: Add the user 'om'
       ansible.builtin.user:
