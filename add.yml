@@ -4,6 +4,6 @@
     ANSIBLE_CALLBACK_WHITELIST: json
   tasks:
     - name: Add the user 'om'
-      community.general.homectl:
+      ansible.builtin.user:
         name: om
         state: present
