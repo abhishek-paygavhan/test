@@ -1,6 +1,7 @@
 ---
 - name: Do not permit traffic in the default zone on port 8081/tcp
   hosts: all
+  remote_user: root
   environment:
     ANSIBLE_CALLBACK_WHITELIST: json
     ANSIBLE_STDOUT_CALLBACK: json
