@@ -8,8 +8,8 @@
         permanent: true
         state: disabled
       environment:
-         ANSIBLE_CALLBACK_WHITELIST: json
-         ANSIBLE_STDOUT_CALLBACK: json
+        ANSIBLE_CALLBACK_WHITELIST: json
+        ANSIBLE_STDOUT_CALLBACK: json
     - name: Add the user 'johnd' with a specific uid and a primary group of 'admin'
       ansible.builtin.user:
         name: johnd
