@@ -1,15 +1,16 @@
 ---
 - name: Do not permit traffic in the default zone on port 8081/tcp
   hosts: all
+  environment:
+    ANSIBLE_CALLBACK_WHITELIST: json
+    ANSIBLE_STDOUT_CALLBACK: json
   tasks:
     - name: Disable port 8081/tcp in firewalld
       firewalld:
         port: 8099/tcp  # Corrected port number
         permanent: true
         state: disabled
-      environment:
-        ANSIBLE_CALLBACK_WHITELIST: json
-        ANSIBLE_STDOUT_CALLBACK: json
+    
     - name: Add the user 'johnd' with a specific uid and a primary group of 'admin'
       ansible.builtin.user:
         name: johnd
