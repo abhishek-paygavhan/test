@@ -9,6 +9,6 @@
           controller_username: admin
           controller_password: redhat
           inventory: source
-          state: absent
+          enabled: false
 
   
