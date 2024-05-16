@@ -1,5 +1,7 @@
 - name: show msg hello
   hosts: all
+  environment:
+     ANSIBLE_STDOUT_CALLBACK: "json"
   tasks:
      - name: Print the fact variable value
        ansible.builtin.debug:
