@@ -5,5 +5,5 @@
        ansible.builtin.debug:
            msg: Hello
        environment:
-        ANSIBLE_CALLBACK_WHITELIST: "json"
-        ANSIBLE_STDOUT_CALLBACK: "json"
+         ANSIBLE_CALLBACK_WHITELIST: "json"
+         ANSIBLE_STDOUT_CALLBACK: "json"
