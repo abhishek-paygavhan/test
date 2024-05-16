@@ -2,6 +2,7 @@
   hosts: all
   tasks:
      - ansible.controller.host:
+          controller_host:  https://10.74.250.184/
           inventory: source
           name: '10.74.254.253'
           state: absent
