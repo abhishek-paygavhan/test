@@ -3,4 +3,4 @@
   tasks:
      - name: Print the fact variable value
        ansible.builtin.debug:
-           msg: System hostname {{abhi}}
+           msg: Hello
