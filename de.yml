@@ -1,0 +1,8 @@
+- name: test disable and enabled
+  hosts: all
+  tasks:
+     - ansible.controller.host:
+          inventory: source
+          name: '10.74.254.253'
+          state: absent
+  
