@@ -4,6 +4,8 @@
      - ansible.controller.host:
           validate_certs:  false
           controller_host:  http://10.74.250.184/
+          controller_username: admin
+          controller_password: redhat
           inventory: source
           name: '10.74.254.253'
           state: absent
