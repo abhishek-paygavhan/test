@@ -1,0 +1,9 @@
+---
+- name: Disable all hosts in inventory
+  hosts: all
+  tasks:
+    - name: Set ansible_connection variable to disabled
+      ansible.builtin.group_vars:
+        group: all
+        vars:
+          ansible_connection: disabled
