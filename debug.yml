@@ -1,10 +1,11 @@
 - name: show fact variable
   hosts: all
-  environment:
-     ANSIBLE_CALLBACKS_ENABLED: "true"
-     ANSIBLE_STDOUT_CALLBACK: "json"
   tasks:
      - name: Print the fact variable value
        ansible.builtin.debug:
            msg: Hello
+       environment:
+         ANSIBLE_CALLBACKS_ENABLED: "true"
+         ANSIBLE_STDOUT_CALLBACK: "json"
+
        
