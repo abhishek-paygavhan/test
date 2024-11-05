@@ -7,10 +7,9 @@
         state: present
       tags: install
 
-    - name: Start Apache service
-      service:
-        name: httpd
-        state: started
+    - name: useradd
+      ansible.builtin.user:
+        name: abhi
       tags: start
 
     - name: Configure Apache
