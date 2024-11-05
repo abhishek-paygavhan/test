@@ -1,0 +1,20 @@
+- name: Install and configure Apache
+  hosts: webservers
+  tasks:
+    - name: Install Apache
+      yum:
+        name: httpd
+        state: present
+      tags: install
+
+    - name: Start Apache service
+      service:
+        name: httpd
+        state: started
+      tags: start
+
+    - name: Configure Apache
+      template:
+        src: /path/to/httpd.conf.j2
+        dest: /etc/httpd/conf/httpd.conf
+      tags: configure
