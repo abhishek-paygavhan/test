@@ -1,5 +1,5 @@
 - name: Install and configure Apache
-  hosts: webservers
+  hosts: all
   tasks:
     - name: Install Apache
       yum:
