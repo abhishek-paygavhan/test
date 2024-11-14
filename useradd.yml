@@ -1,5 +1,9 @@
-- hosts: all
+---
+- name: Add a new user
+  hosts: all
+  become: true
   tasks:
-      - name: Add the user 'johnd' with a specific uid and a primary group of 'admin'
-        ansible.builtin.user:
-           name: johnd
+    - name: Add user with variable
+      ansible.builtin.user:
+        name: "{{ user_name }}"
+        state: present
