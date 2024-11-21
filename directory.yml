@@ -1,0 +1,6 @@
+- hosts: localhost
+  tasks:
+   - name: Create Directory test
+     ansible.builtin.file:
+      path: /root/network-programmability/backups/
+      state: directory
