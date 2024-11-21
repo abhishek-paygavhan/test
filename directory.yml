@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: all
   tasks:
    - name: Create Directory test
      ansible.builtin.file:
