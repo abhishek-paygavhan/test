@@ -1,12 +1,13 @@
-- name: Copy a file
+---
+- name: Copy a file from /root/abhi to /home
   hosts: all
+  become: yes
   tasks:
-   - name: Copy file with owner and permissions
-     ansible.builtin.copy:
-       src: /tmp/bajaj/abhi
-       dest: /tmp/xyz
-       owner: root
-       group: root
-       mode: '0700'
-    
+    - name: Copy the file to /home
+      copy:
+        src: /root/abhi
+        dest: /home/abhi
+        owner: root
+        group: root
+        mode: '0644'
 
