@@ -2,6 +2,8 @@
   hosts: all
   tasks:
      - name: "Run locale command"
+       become: yes
+       become_user: abhi
        shell: "locale"
        register: check_locale
        
