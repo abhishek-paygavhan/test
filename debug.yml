@@ -1,9 +1,10 @@
 - name: show msg hello
   hosts: all
   tasks:
+     - name: "Run locale command"
+       shell: "locale"
+       register: check_locale
+       
      - name: Print the fact variable value
        ansible.builtin.debug:
-           msg: Hello
-      
-
-       
+           msg: "{{ check_locale }}"
