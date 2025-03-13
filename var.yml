@@ -1,0 +1,5 @@
+- hosts: all
+   - name: Configuration External Env
+     ansible.builtin.debug:
+        msg:
+          - "test2 : {{ lookup('env', 'VAR1') }}"
