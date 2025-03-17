@@ -1,7 +1,7 @@
 - hosts: all
   tasks:
-    - name: Configuration External Env
-  ansible.builtin.debug:
-        msg:
-          - "test2 : {{ lookup('env', 'VAR1') }}"
+    - name: Create a user
+      ansible.builtin.user:
+        name: john
+        state: present
 
