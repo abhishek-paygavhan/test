@@ -1,0 +1,20 @@
+---
+- name: reproduce customer issue
+  hosts: all
+  vars:
+    aap_hostname: dhcp230-243.awxlab.pnq2.redhat.com
+    aap_username: admin
+    aap_password: ansible
+
+    controller_schedules:
+    - name: "Patching - Monthly patching ota_dev"
+      organization: "{{ plol_organization }}"
+      unified_job_template: "Patching - Patch & Reboot Workflow ib_pf_onl_lnx"
+      rrule: "DTSTART;TZID=Europe/Amsterdam:20240101T030000 RRULE:FREQ=MONTHLY;INTERVAL=1;BYDAY=TU;BYMONTHDAY=7,8,9,10,11,12,13"
+   labels:
+     - "patching"
+     - "secondorg"
+
+  roles:
+    - infra.aap_configuration.controller_schedules
+~~~
