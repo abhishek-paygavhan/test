@@ -5,6 +5,9 @@
     aap_hostname: dhcp230-243.awxlab.pnq2.redhat.com
     aap_username: admin
     aap_password: ansible
+    plol_organization:
+      - Org1
+      - Org2
 
     controller_schedules:
     - name: "Patching - Monthly patching ota_dev"
