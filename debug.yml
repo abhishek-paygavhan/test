@@ -1,12 +1,5 @@
 - name: show msg hello
   hosts: "{{ host_name }}"
-  
-  pre_tasks:
-    - name: Fail if host_name is 'all'
-      ansible.builtin.fail:
-        msg: "'all' is not allowed as a target for this playbook. Please provide a specific host or group."
-      when: host_name == "all"
-
   tasks:
     - name: Print the fact variable value
       ansible.builtin.debug:
