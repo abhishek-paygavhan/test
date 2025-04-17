@@ -1,5 +1,5 @@
 - name: show msg hello
-  hosts: "{{ hosts }}"
+  hosts: "{{ host_name: }}"
   tasks:
      - name: Print the fact variable value
        ansible.builtin.debug:
