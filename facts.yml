@@ -1,0 +1,9 @@
+---
+- name: Set fact for server
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: Set variable for a machine
+      ansible.builtin.set_fact:
+        ServerMaintenance: "{{ varvalue }}"
+        cacheable: yes
