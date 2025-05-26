@@ -2,6 +2,8 @@
 - name: Set fact for server
   hosts: all
   gather_facts: true
+  vars:
+    varvalue: abhi123
   tasks:
     - name: Set variable for a machine
       ansible.builtin.set_fact:
