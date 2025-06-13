@@ -1,0 +1,5 @@
+- name: ping module
+  gather_facts: false
+  hosts: all
+  tasks:
+    - debug: var=ServerMaintenance
