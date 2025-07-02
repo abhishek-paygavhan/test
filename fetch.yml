@@ -1,0 +1,8 @@
+- name: Run an Evaluate-STIG scan and generate CKL
+  hosts: all
+  tasks:
+    - name: Fetch
+      ansible.builtin.fetch:
+        src: /home/cyber/Documents/test.txt
+        dest: /tmp/
+        flat: yes
