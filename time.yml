@@ -1,0 +1,5 @@
+- hosts: all
+  tasks:
+    - name: Print the timefmt variable
+      debug:
+        msg: "timefmt: ({{ timefmt }})"
