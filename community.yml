@@ -6,14 +6,6 @@
     - community.general
 
   tasks:
-    - name: Create a file under /root
-      community.general.tempfile:
-        state: file
-        path: /root
-        prefix: example_
-        suffix: .txt
-      register: temp_file
-
-    - name: Show the created file path
-      debug:
-        msg: "File created at {{ temp_file.path }}"
+    - name: Print Hello World
+      community.general.echo:
+        msg: "Hello, World from community.general!"
