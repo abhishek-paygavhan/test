@@ -4,8 +4,13 @@
   become: true
   collections:
     - community.general
-
+    
   tasks:
-    - name: Print Hello World
-      community.general.debug:
-        msg: "Hello, World from community.general!"
+    - name: Get current local time
+      community.general.time:
+        utc: false
+      register: current_time
+
+    - name: Display Hello World message
+      ansible.builtin.debug:
+        msg: "Hello, World! The current time is {{ current_time.time }}"
