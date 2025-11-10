@@ -2,15 +2,13 @@
 - name: Simple playbook using community.general to create a file in /root
   hosts: all
   become: true
-  collections:
-    - community.general
-    
+  
   tasks:
-    - name: Get current local time
-      community.general.time:
-        utc: false
-      register: current_time
+      - name: Get current local time
+        community.general.time:
+          utc: false
+        register: current_time
 
-    - name: Display Hello World message
-      ansible.builtin.debug:
-        msg: "Hello, World! The current time is {{ current_time.time }}"
+      - name: Display Hello World message
+        ansible.builtin.debug:
+          msg: "Hello, World! The current time is {{ current_time.time }}"
