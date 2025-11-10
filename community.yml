@@ -4,11 +4,7 @@
   become: true
   
   tasks:
-      - name: Get current local time
-        community.general.time:
-          utc: false
-        register: current_time
+    - name: Set timezone to Asia/Tokyo
+      community.general.timezone:
+        name: Asia/Tokyo
 
-      - name: Display Hello World message
-        ansible.builtin.debug:
-          msg: "Hello, World! The current time is {{ current_time.time }}"
