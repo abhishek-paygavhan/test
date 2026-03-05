@@ -1,0 +1,8 @@
+- name: Test diff output
+  hosts: all
+  tasks:
+    - name: Update line in test file
+      ansible.builtin.lineinfile:
+        path: /tmp/testfile.txt
+        line: "Hello from Ansible"
+        create: yes
